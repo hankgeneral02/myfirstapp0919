@@ -1,33 +1,45 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  var appTitle = Text('我的第一個Flutter App'),
+  var appTitle = Text('我的第一個Flutter App',),
       hiFlutter = Text(
-        'hi,Flutter.',
-        style: TextStyle(fontSize: 50),
+        'hi,Flutter,今天是20220926',
+        style: TextStyle(fontSize: 35, decoration: TextDecoration.underline),
       );
 
   var appBody = Center(
     child: hiFlutter,
   );
 
+  var img = Image.network("")
+
   var appBar = AppBar(
-    title:appTitle,
+    title: appTitle,
+    centerTitle: true,
+    backgroundColor: Color.fromARGB(255, 2, 128, 144),
   );
 
   var app = MaterialApp(
-    home:Scaffold(
-      appBar:appBar,
-      body:appBody,
+    home: Scaffold(
+      appBar: appBar,
+      body: appBody,
+      backgroundColor: Color.fromARGB(255, 228, 253, 225),
     ),
   );
   runApp(app);
 }
 
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
+  }
+}
 //
-//   This widget is the root of your application.
+//   // This widget is the root of your application.
 //   // @override
 //   // Widget build(BuildContext context) {
 //   //   return MaterialApp(
@@ -113,23 +125,23 @@ void main() {
 //           center the children vertically; the main axis here is the vertical
 //           axis because Columns are vertical (the cross axis would be
 //           horizontal).
-//           // mainAxisAlignment: MainAxisAlignment.center,
-//           // children: <Widget>[
-//           //   const Text(
-//           //     'You have pushed the button this many times:',
-//           //   ),
-//           //   Text(
-//           //     '$_counter',
-//           //     style: Theme.of(context).textTheme.headline4,
-//           //   ),
-//           // ],
-//         // ),
-//       // ),
-//       // floatingActionButton: FloatingActionButton(
-//       //   onPressed: _incrementCounter,
-//       //   tooltip: 'Increment',
-//       //   child: const Icon(Icons.add),
-//       // ), // This trailing comma makes auto-formatting nicer for build methods.
-//     // );
-//   // }
-// // }
+          // mainAxisAlignment: MainAxisAlignment.center,
+          // children: <Widget>[
+          //   const Text(
+          //     'You have pushed the button this many times:',
+          //   ),
+          //   Text(
+          //     '$_counter',
+          //     style: Theme.of(context).textTheme.headline4,
+          //   ),
+          // ],
+        // ),
+      // ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: _incrementCounter,
+      //   tooltip: 'Increment',
+      //   child: const Icon(Icons.add),
+      // ), // This trailing comma makes auto-formatting nicer for build methods.
+    // );
+  // }
+// }
