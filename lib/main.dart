@@ -1,17 +1,26 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  var appTitle = Text('我的第一個Flutter App',),
+  var appTitle = Text(
+        '我的第一個Flutter App',
+      ),
       hiFlutter = Text(
         'hi,Flutter,今天是20220926',
         style: TextStyle(fontSize: 35, decoration: TextDecoration.underline),
       );
 
-  var appBody = Center(
-    child: hiFlutter,
-  );
+  // var appBody = Center(
+  //   child: hiFlutter,
+  // );
 
-  var img = Image.network("")
+  var img = Image.network(
+    "https://github.com/hankgeneral02/myfirstapp0919/blob/main/aaa/aaa.jpg?raw=true",
+    width: 400,
+    height: 200,
+  );
+  var appBody = Center(
+    child: img,
+  );
 
   var appBar = AppBar(
     title: appTitle,
@@ -125,23 +134,23 @@ class MyApp extends StatelessWidget {
 //           center the children vertically; the main axis here is the vertical
 //           axis because Columns are vertical (the cross axis would be
 //           horizontal).
-          // mainAxisAlignment: MainAxisAlignment.center,
-          // children: <Widget>[
-          //   const Text(
-          //     'You have pushed the button this many times:',
-          //   ),
-          //   Text(
-          //     '$_counter',
-          //     style: Theme.of(context).textTheme.headline4,
-          //   ),
-          // ],
-        // ),
-      // ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: _incrementCounter,
-      //   tooltip: 'Increment',
-      //   child: const Icon(Icons.add),
-      // ), // This trailing comma makes auto-formatting nicer for build methods.
-    // );
-  // }
+// mainAxisAlignment: MainAxisAlignment.center,
+// children: <Widget>[
+//   const Text(
+//     'You have pushed the button this many times:',
+//   ),
+//   Text(
+//     '$_counter',
+//     style: Theme.of(context).textTheme.headline4,
+//   ),
+// ],
+// ),
+// ),
+// floatingActionButton: FloatingActionButton(
+//   onPressed: _incrementCounter,
+//   tooltip: 'Increment',
+//   child: const Icon(Icons.add),
+// ), // This trailing comma makes auto-formatting nicer for build methods.
+// );
+// }
 // }
