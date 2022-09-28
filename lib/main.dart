@@ -15,7 +15,7 @@ void main() {
 
   var appBody = Container(
       margin: const EdgeInsets.all(50.0),
-      alignment: Alignment.topCenter,
+      alignment: Alignment.topRight,
       color: Colors.amberAccent,
       child: Text("hi flutter 今天是20220928"),
     );
