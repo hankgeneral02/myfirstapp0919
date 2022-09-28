@@ -13,14 +13,12 @@ void main() {
   //   child: hiFlutter,
   // );
 
-  var img = Image.network(
-    "https://github.com/hankgeneral02/myfirstapp0919/blob/main/aaa/aaa.jpg?raw=true",
-    width: 400,
-    height: 200,
-  );
-  var appBody = Center(
-    child: img,
-  );
+  var appBody = Container(
+      margin: const EdgeInsets.all(50.0),
+      alignment: Alignment.topCenter,
+      color: Colors.amberAccent,
+      child: Text("hi flutter 今天是20220928"),
+    );
 
   var appBar = AppBar(
     title: appTitle,
