@@ -1,24 +1,77 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  var appTitle = Text(
+  var appTitle = const Text(
         '我的第一個Flutter App',
-      ),
-      hiFlutter = Text(
-        'hi,Flutter,今天是20220926',
-        style: TextStyle(fontSize: 35, decoration: TextDecoration.underline),
       );
+      // hiFlutter = const Text(
+      //   'hi,Flutter,今天是20220926',
+      //   style: TextStyle(fontSize: 35, decoration: TextDecoration.underline),
+      // );
 
   // var appBody = Center(
   //   child: hiFlutter,
   // );
 
-  var appBody = Container(
-      margin: const EdgeInsets.all(50.0),
-      alignment: Alignment.topRight,
-      color: Colors.amberAccent,
-      child: Text("hi flutter 今天是20220928"),
-    );
+  // var appBody = Row(
+  //   mainAxisAlignment: MainAxisAlignment.center,
+  //   children: [
+  //     Text(
+  //       '物件1',
+  //       style: TextStyle(fontSize: 10),
+  //       textAlign: TextAlign.center,
+  //     ),
+  //     Text(
+  //       '物件2',
+  //       style: TextStyle(fontSize: 20),
+  //       textAlign: TextAlign.center,
+  //     ),
+  //     Text(
+  //       '物件3',
+  //       style: TextStyle(fontSize: 30),
+  //     )
+  //   ],
+  // );
+
+  var appBody = GridView.count(
+    primary: false,
+    padding: const EdgeInsets.all(20),
+    crossAxisSpacing: 10,
+    mainAxisSpacing: 10,
+    crossAxisCount: 2,
+    children: <Widget>[
+      Container(
+        padding: const EdgeInsets.all(8),
+        color: Colors.teal[100],
+        child: Text("1321312")
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+       color: Colors.teal[200],
+        child:Text("123132115"),
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+       // color: Colors.teal[300],
+        child: FittedBox(fit: BoxFit.contain,child: FlutterLogo(),)
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+       // color: Colors.teal[400],
+        child: FittedBox(fit: BoxFit.contain,child: FlutterLogo(),
+        )),
+      Container(
+        padding: const EdgeInsets.all(8),
+       // color: Colors.teal[500],
+        child: FittedBox(fit: BoxFit.contain,child: FlutterLogo(),
+      )),
+      Container(
+        padding: const EdgeInsets.all(8),
+       // color: Colors.teal[600],
+        child: FittedBox(fit: BoxFit.contain,child: FlutterLogo(),)
+      ),
+    ],
+  );
 
   var appBar = AppBar(
     title: appTitle,
